@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- this is how we link up the css -->
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
     <!-- And this is how we link up the JS! -->
     <script defer src="js/main.js"></script>
     <!-- A fun title -->
-    <title>Empowering Tic Tac Toe for the Good of Humanity</title>
-</head>
-<body>
+    <title>Tic-Tac-Toe 2023</title>
+  </head>
+  <body>
     <h1>Tic-Tac-Toe</h1>
-    <h2>It's X's turn!</h2>
+    <!-- Ajout de l'id infoPartie pour détecter en JS -->
+    <h2 id = "infoPartie">C'est le tour du joueur X !</h2>
     <!-- Many websites are just divs on divs on divs. -->
     <div class="flex-container flex-column">
-        <div class="flex-container flex-wrap" id="board">
+      <div class="flex-container flex-wrap" id="board">
         <div class="square"></div>
         <div class="square"></div>
         <div class="square"></div>
@@ -26,9 +27,34 @@
         <div class="square"></div>
         <div class="square"></div>
         <div class="square"></div>
-        </div>
-        <!-- I added a little reset button because our users are going to want to play round after round of our glorious game without ever refreshing the browser! -->
-        <button id="reset-button">reset</button>
+      </div>
+      <!-- I added a little reset button because our users are going to want to play round after round of our glorious game without ever refreshing the browser! -->
+      <button id="reset-button">Réinitialiser</button>
     </div>
-</body>
+
+    <!-- Bas de la page -->
+    <footer>
+      <!-- Section de gauche -->
+      <div>
+        <h3>Inspiration du projet :</h3>
+        
+        <a href="https://github.com/annaelizabeth2019/tictactoetwo">
+          https://github.com/annaelizabeth2019/tictactoetwo
+        </a>
+      </div>
+
+      <!-- Centre -->
+      <div>
+        <h3>Félix Dupras-Simard</h3>
+        Design Web A2023
+      </div>
+
+      <!-- Section de droite -->
+      <div>
+        <a href="mailto:2347831@carrefour.cegepvicto.ca"
+          ><img src="assets/gifs/Nerd.gif" alt="M'envoyer un courriel"
+        /></a>
+      </div>
+    </footer>
+  </body>
 </html>
