@@ -1,3 +1,6 @@
+/*Importation de la police d'écriture pour les X et les O*/
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
 body {
   margin: 0 auto;
   /*Ajout de CSS pour bloquer le footer au bas de la page*/
@@ -54,11 +57,11 @@ h2 {
 
   /* Changement de couleur des X et des O*/
   color: #ffffff;
-  text-shadow:
-  0 0 7px #8D34F9,
-  0 0 10px #8D34F9,
-  0 0 21px #8D34F9,
-  0 0 42px #9C4CFF;
+  text-shadow: 0 0 7px #8d34f9, 0 0 10px #8d34f9, 0 0 21px #8d34f9,
+    0 0 42px #9c4cff;
+
+    /* Changement de la police d'écriture pour le texte*/
+    font-family: 'Tilt Neon', sans-serif;
 }
 
 #reset-button {
@@ -70,28 +73,30 @@ h2 {
   /*Retrait de width pour régler le texte qui dépasse*/
   /* width: 100px; */
   margin: 10px;
-  
+
   /*CSS pour modifier l'aspect du bouton*/
   background-color: #2b2b2b;
-  color: #BB86FC;
+  color: #bb86fc;
 
   /*Code pour l'animation du hover*/
-  transition: all 200ms ease-out 100ms
+  transition: all 200ms ease-out 100ms;
 }
 
 /*CSS pour modifer les divers polices d'écritures*/
 h1 {
-color: aliceblue;
+  color: aliceblue;
 
-font-size: 3em;
-margin-bottom: 10px;
+  font-size: 3em;
+  margin-bottom: 10px;
 
-animation: flicker 2s infinite alternate
+  /* Changement de la police d'écriture pour le texte*/
+  font-family: 'Tilt Neon', sans-serif;
+
+  animation: flicker 2s infinite alternate;
 }
 
-
-h2{
-    color: #BB86FC; 
+h2 {
+  color: #bb86fc;
 }
 
 h3 {
@@ -123,34 +128,33 @@ footer {
 
 img {
   border-radius: 50%;
-  width: 12.5%;
+  width: 15%;
 }
 
-
 #reset-button:hover {
-    background-color: #CF6679;
-    color: black;
+  background-color: #cf6679;
+  color: black;
 
-    margin: 20px;
-    transform: scale(1.25);
-    
+  margin: 20px;
+  transform: scale(1.25);
 }
 
 /*Grandement inspiré de ce code CSS : https://css-tricks.com/how-to-create-neon-text-with-css/*/
 @keyframes flicker {
-    
-    0%, 18%, 22%, 25%, 53%, 57%, 100% {
-  
-        text-shadow:
-        0 0 7px #8D34F9,
-        0 0 10px #8D34F9,
-        0 0 21px #8D34F9,
-        0 0 42px #9C4CFF;
-    
-    }
-    
-    20%, 24%, 55% {        
-        text-shadow: none;
-    }    
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 7px #8d34f9, 0 0 10px #8d34f9, 0 0 21px #8d34f9,
+      0 0 42px #9c4cff;
   }
-  
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
