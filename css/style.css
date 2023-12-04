@@ -59,11 +59,8 @@ h2 {
 
   /* Changement de couleur des X et des O*/
   color: #ffffff;
-  text-shadow: 0 0 7px #8d34f9, 0 0 10px #8d34f9, 0 0 21px #8d34f9,
-    0 0 42px #9c4cff;
-
-    /* Changement de la police d'écriture pour le texte*/
-    font-family: 'Tilt Neon', sans-serif;
+  text-shadow: 0 0 7px #ff0000, 0 0 10px #ff0000, 0 0 21px #ff0000,
+    0 0 42px #e24651;
 }
 
 #reset-button {
@@ -91,9 +88,6 @@ h1 {
   font-size: 3em;
   margin-bottom: 10px;
 
-  /* Changement de la police d'écriture pour le texte*/
-  font-family: 'Tilt Neon', sans-serif;
-
   animation: flicker 2s infinite alternate;
 }
 
@@ -110,7 +104,15 @@ p {
   color: #ffffff;
 }
 
-/* CSS pour le bas de la page */
+/*?CSS pour la zone du stockage de points*/
+#stockagePoints {
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/*?CSS pour le bas de la page */
 footer > div {
   display: flex;
   justify-content: center;
@@ -144,7 +146,6 @@ img {
 
 /*!Grandement inspiré de ce code CSS : https://css-tricks.com/how-to-create-neon-text-with-css/*/
 @keyframes flicker {
-
   0%,
   18%,
   22%,
