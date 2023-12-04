@@ -30,12 +30,7 @@ document.getElementById("reset-button").addEventListener("click", init);
 function getWinner() {
   let winner = null;
   winningCombos.forEach(function (combo, index) {
-    if (
-      board[combo[0]] &&
-      board[combo[0]] === board[combo[1]] &&
-      board[combo[0]] === board[combo[2]]
-    )
-      winner = board[combo[0]];
+    if (board[combo[0]] && board[combo[0]] === board[combo[1]] && board[combo[0]] === board[combo[2]]) winner = board[combo[0]];
   });
   return winner ? winner : board.includes("") ? null : "T";
 }
@@ -47,7 +42,43 @@ function handleTurn() {
   board[idx] = turn;
   turn = turn === "X" ? "O" : "X";
   win = getWinner();
-  
+
+  let victoireJ1 = document.querySelector("#pointsX");
+  let victoireJ2 = document.querySelector("#pointsO");
+  let nbPartiesJoue = document.querySelector("#nbrePartieJoué");
+
+  if (win != null) {
+    if (win == "X") {
+      //Si le storage est existant (Victoire des X) :
+      if (sessionStorage.victoireX) {
+        sessionStorage.victoireX = Number(sessionStorage.victoireX) + 1;
+      }
+      else {
+        sessionStorage.victoireX = 1;
+      }
+
+      victoireJ1.innerHTML = ("Points X : " + sessionStorage.victoireX);
+    }
+    else {
+      //Si le storage est existant (Victoire des O) :
+      if (sessionStorage.victoireO) {
+        sessionStorage.victoireO = Number(sessionStorage.victoireO) + 1;
+      }
+      else {
+        sessionStorage.victoireO = 1;
+      }
+
+      victoireJ2.innerHTML = ("Points O : " + sessionStorage.victoireO);
+    }
+    //Si le storage est existant (Nombre de parties joués) :
+    if (localStorage.nbParties) {
+      localStorage.nbParties = Number(localStorage.nbParties) + 1;
+    } else {
+      localStorage.nbParties = 1;
+    }
+    nbPartiesJoue.innerHTML = ("Nombre de parties joués sur ce PC : " + localStorage.nbParties);
+  }
+
   render();
 }
 
@@ -65,8 +96,11 @@ function render() {
     win === "T"
       ? `Égalité !`
       : win
-      ? `${win} a gagné!`
-      : `C'est le tour de ${turn}!`;
+        ? `${win} a gagné!`
+        : `C'est le tour de ${turn}!`;
 }
 
 init();
+
+
+

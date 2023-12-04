@@ -1,5 +1,5 @@
 /*Importation de la police d'écriture pour les X et les O*/
-@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
 
 body {
   margin: 0 auto;
@@ -10,7 +10,9 @@ body {
   flex-direction: column;
 
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+
+  /* Changement de la police d'écriture pour le texte*/
+  font-family: "Tilt Neon", sans-serif;
 
   background-color: #121212;
 }
@@ -57,11 +59,8 @@ h2 {
 
   /* Changement de couleur des X et des O*/
   color: #ffffff;
-  text-shadow: 0 0 7px #8d34f9, 0 0 10px #8d34f9, 0 0 21px #8d34f9,
-    0 0 42px #9c4cff;
-
-    /* Changement de la police d'écriture pour le texte*/
-    font-family: 'Tilt Neon', sans-serif;
+  text-shadow: 0 0 7px #ff0000, 0 0 10px #ff0000, 0 0 21px #ff0000,
+    0 0 42px #e24651;
 }
 
 #reset-button {
@@ -76,38 +75,44 @@ h2 {
 
   /*CSS pour modifier l'aspect du bouton*/
   background-color: #2b2b2b;
-  color: #bb86fc;
+  color: #e24651;
 
   /*Code pour l'animation du hover*/
   transition: all 200ms ease-out 100ms;
 }
 
-/*CSS pour modifer les divers polices d'écritures*/
+/*?CSS pour modifer les divers polices d'écritures*/
 h1 {
   color: aliceblue;
 
   font-size: 3em;
   margin-bottom: 10px;
 
-  /* Changement de la police d'écriture pour le texte*/
-  font-family: 'Tilt Neon', sans-serif;
-
   animation: flicker 2s infinite alternate;
 }
 
 h2 {
-  color: #bb86fc;
+  color: #e24651;
 }
 
 h3 {
   font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 p {
   color: #ffffff;
 }
 
-/* CSS pour le bas de la page */
+/*?CSS pour la zone du stockage de points*/
+#stockagePoints {
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/*?CSS pour le bas de la page */
 footer > div {
   display: flex;
   justify-content: center;
@@ -139,7 +144,7 @@ img {
   transform: scale(1.25);
 }
 
-/*Grandement inspiré de ce code CSS : https://css-tricks.com/how-to-create-neon-text-with-css/*/
+/*!Grandement inspiré de ce code CSS : https://css-tricks.com/how-to-create-neon-text-with-css/*/
 @keyframes flicker {
   0%,
   18%,
@@ -148,8 +153,8 @@ img {
   53%,
   57%,
   100% {
-    text-shadow: 0 0 7px #8d34f9, 0 0 10px #8d34f9, 0 0 21px #8d34f9,
-      0 0 42px #9c4cff;
+    text-shadow: 0 0 7px #ff0000, 0 0 10px #ff0000, 0 0 21px #ff0000,
+      0 0 42px #e24651;
   }
 
   20%,
