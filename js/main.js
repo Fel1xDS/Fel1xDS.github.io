@@ -16,6 +16,12 @@ let board;
 let turn = "X";
 let win;
 
+
+/*Mes Variables*/ 
+let square1;
+let square2;
+let square3;
+
 /*----- cached element references -----*/
 
 const squares = Array.from(document.querySelectorAll("#board div"));
@@ -35,6 +41,23 @@ function getWinner() {
       board[combo[0]] === board[combo[1]] &&
       board[combo[0]] === board[combo[2]]
     )
+      /* 
+      squares[combo[0]]
+      squares[combo[1]]
+      squares[combo[2]]
+      ! Affichage de la barre (Fonctionnalité JavaScript)
+      */
+
+     if(combo == winningCombos[0]){
+      square1 = document.createElement("div");
+      squares[combo[0]].appendChild(square1)
+     }
+      
+      
+
+
+
+
       winner = board[combo[0]];
   });
   return winner ? winner : board.includes("") ? null : "T";

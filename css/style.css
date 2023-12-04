@@ -1,5 +1,5 @@
 /*Importation de la police d'écriture pour les X et les O*/
-@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
 
 body {
   margin: 0 auto;
@@ -60,8 +60,8 @@ h2 {
   text-shadow: 0 0 7px #8d34f9, 0 0 10px #8d34f9, 0 0 21px #8d34f9,
     0 0 42px #9c4cff;
 
-    /* Changement de la police d'écriture pour le texte*/
-    font-family: 'Tilt Neon', sans-serif;
+  /* Changement de la police d'écriture pour le texte*/
+  font-family: "Tilt Neon", sans-serif;
 }
 
 #reset-button {
@@ -82,7 +82,7 @@ h2 {
   transition: all 200ms ease-out 100ms;
 }
 
-/*CSS pour modifer les divers polices d'écritures*/
+/*?CSS pour modifer les divers polices d'écritures*/
 h1 {
   color: aliceblue;
 
@@ -90,7 +90,7 @@ h1 {
   margin-bottom: 10px;
 
   /* Changement de la police d'écriture pour le texte*/
-  font-family: 'Tilt Neon', sans-serif;
+  font-family: "Tilt Neon", sans-serif;
 
   animation: flicker 2s infinite alternate;
 }
@@ -107,8 +107,40 @@ p {
   color: #ffffff;
 }
 
-/* CSS pour le bas de la page */
-footer > div {
+
+/*?CSS pour l'affichage de la barre gagnante*/
+.barre-horizontale {
+  border: white solid 4px;
+
+  width: 100%;
+}
+
+.barre-verticale{
+  border: white solid 4px;
+
+  height: 100%;
+}
+
+/* / */
+.barre-oblique{
+  border: white solid 4px;
+
+  width: 100%;
+  transform: skewY(-45deg);
+}
+
+/* \ */
+.barre-oblique-inverse{
+  border: white solid 4px;
+
+  width: 100%;
+  transform: skewY(45deg);
+}
+
+
+
+/*? CSS pour le bas de la page */
+footer>div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,8 +171,9 @@ img {
   transform: scale(1.25);
 }
 
-/*Grandement inspiré de ce code CSS : https://css-tricks.com/how-to-create-neon-text-with-css/*/
+/*!Grandement inspiré de ce code CSS : https://css-tricks.com/how-to-create-neon-text-with-css/*/
 @keyframes flicker {
+
   0%,
   18%,
   22%,
