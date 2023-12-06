@@ -16,6 +16,14 @@ let board;
 let turn = "X";
 let win;
 
+// Mes variables 
+let victoireJ1 = document.querySelector("#pointsX");
+let victoireJ2 = document.querySelector("#pointsO");
+
+//Affiche le nombre de parties joués sur l'ordinateur
+let nbPartiesJoue = document.querySelector("#nbrePartieJoué");
+nbPartiesJoue.innerHTML = ("Nombre de parties joués sur ce PC : " + localStorage.nbParties);
+
 /*----- cached element references -----*/
 
 const squares = Array.from(document.querySelectorAll("#board div"));
@@ -42,10 +50,6 @@ function handleTurn() {
   board[idx] = turn;
   turn = turn === "X" ? "O" : "X";
   win = getWinner();
-
-  let victoireJ1 = document.querySelector("#pointsX");
-  let victoireJ2 = document.querySelector("#pointsO");
-  let nbPartiesJoue = document.querySelector("#nbrePartieJoué");
 
   if (win != null) {
     if (win == "X") {
